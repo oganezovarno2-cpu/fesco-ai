@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>FESCO.AI — Premium AI Agents</title>
   <meta name="description" content="FESCO.AI builds premium AI agents for Phone, WhatsApp, Telegram, Instagram and Facebook. Book a meeting and get a custom quote." />
+  <meta name="theme-color" content="#05070C" />
+
+  <!-- Optional: social preview -->
+  <meta property="og:title" content="FESCO.AI — Premium AI Agents" />
+  <meta property="og:description" content="AI Agents that call, chat and convert — across phone and messengers." />
+  <meta property="og:type" content="website" />
 
   <style>
     :root{
-      /* Scroll-driven color controls */
-      --p: 0;                 /* 0..1 progress */
+      --p: 0;                 /* 0..1 scroll progress */
       --h1: 215;              /* base hue */
       --h2: 42;               /* gold hue */
       --h3: 172;              /* emerald hue */
 
-      --bg: #05070C;
       --text: rgba(255,255,255,.92);
       --muted: rgba(255,255,255,.70);
       --muted2: rgba(255,255,255,.56);
 
       --stroke: rgba(255,255,255,.10);
       --panel: rgba(255,255,255,.055);
-      --panel2: rgba(255,255,255,.085);
 
       --radius: 22px;
       --shadow: 0 18px 60px rgba(0,0,0,.55);
@@ -36,16 +39,14 @@
       color:var(--text);
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
       letter-spacing:.1px;
-      background: var(--bg);
+      background:#05070C;
       overflow-x:hidden;
     }
 
-    /* === ONE CONTINUOUS PREMIUM BACKDROP (NO SECTION SPLITS) === */
+    /* ONE CONTINUOUS PREMIUM BACKDROP */
     .bg{
-      position:fixed;
-      inset:-140px;
-      pointer-events:none;
-      z-index:-3;
+      position:fixed; inset:-140px;
+      pointer-events:none; z-index:-3;
       transform: translateZ(0);
       background:
         radial-gradient(1100px 700px at 78% 10%,
@@ -64,17 +65,13 @@
           #05070C 0%,
           hsl(calc(220 + (var(--p) * 18)) 40% 9%) 45%,
           hsl(calc(210 + (var(--p) * 10)) 45% 7%) 100%);
-      filter: blur(10px) saturate(1.2);
-      opacity: .95;
-      transition: filter .4s var(--ease);
+      filter: blur(10px) saturate(1.25);
+      opacity: .98;
     }
 
-    /* Soft animated light drift (extra premium) */
     .glow{
-      position:fixed;
-      inset:-160px;
-      pointer-events:none;
-      z-index:-2;
+      position:fixed; inset:-160px;
+      pointer-events:none; z-index:-2;
       transform: translateZ(0);
       background:
         radial-gradient(650px 420px at 20% 25%,
@@ -93,12 +90,9 @@
       to{transform: translate3d(18px,14px,0) scale(1.06)}
     }
 
-    /* Film-grain / texture (not heavy) */
     .grain{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:-1;
+      position:fixed; inset:0;
+      pointer-events:none; z-index:-1;
       opacity:.06;
       mix-blend-mode: overlay;
       background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
@@ -179,10 +173,7 @@
       filter: saturate(1.05);
     }
 
-    /* PAGE LAYOUT — NO HARD SECTION DIVIDERS */
-    .wrap{
-      padding: 70px 0 56px;
-    }
+    .wrap{padding: 70px 0 56px}
 
     /* HERO */
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:stretch}
@@ -196,27 +187,16 @@
       font-size:13px;
     }
     .dot{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.8);opacity:.8}
-    h1{
-      margin:16px 0 12px;
-      font-size:56px;line-height:1.02;
-      letter-spacing:-1.3px;
-    }
+    h1{margin:16px 0 12px;font-size:56px;line-height:1.02;letter-spacing:-1.3px}
     @media (max-width:520px){ h1{font-size:40px} }
-    .sub{
-      color:var(--muted);
-      font-size:17px;line-height:1.7;
-      max-width:62ch;
-    }
+    .sub{color:var(--muted);font-size:17px;line-height:1.7;max-width:62ch}
 
-    /* Premium gradient text highlight */
     .shine{
       background: linear-gradient(90deg,
         hsla(calc(var(--h2) + (var(--p)*12)), 95%, 70%, .96),
         hsla(calc(var(--h1) + (var(--p)*35)), 95%, 70%, .88),
         hsla(calc(var(--h3) + (var(--p)*22)), 95%, 70%, .88));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+      -webkit-background-clip:text;background-clip:text;color:transparent;
     }
 
     .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
@@ -265,7 +245,6 @@
     .panel-head{padding:18px 18px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative}
     .panel-title{font-weight:760;letter-spacing:.3px}
     .panel-body{padding:16px 18px 18px;position:relative}
-
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media (max-width:520px){ .grid-2{grid-template-columns:1fr} }
 
@@ -290,7 +269,7 @@
     .tile h3{margin:0;font-size:14px}
     .tile p{margin:6px 0 0;color:var(--muted2);font-size:13px;line-height:1.55}
 
-    /* CONTENT SECTIONS (no split lines, just spacing) */
+    /* CONTENT BLOCKS (no borders/lines) */
     .block{margin-top:64px}
     .block h2{margin:0 0 10px;font-size:34px;letter-spacing:-.6px}
     .lead{margin:0;color:var(--muted);line-height:1.8;max-width:78ch}
@@ -396,6 +375,7 @@
   <div class="glow"></div>
   <div class="grain"></div>
 
+  <!-- NAV -->
   <div class="nav">
     <div class="container nav-inner">
       <div class="brand">
@@ -420,6 +400,7 @@
 
   <main class="wrap">
     <div class="container">
+
       <!-- HERO -->
       <section class="hero-grid">
         <div class="reveal">
@@ -521,11 +502,8 @@
       <section id="services" class="block">
         <div class="reveal">
           <h2>Capabilities</h2>
-          <p class="lead">
-            One system. Multiple channels. A single AI brain trained for your business — built to increase conversion and remove manual workload.
-          </p>
+          <p class="lead">One system. Multiple channels. A single AI brain trained for your business — built to increase conversion and remove manual workload.</p>
         </div>
-
         <div class="cards">
           <div class="card reveal">
             <h3>Omni-Channel AI</h3>
@@ -548,7 +526,6 @@
           <h2>How it works</h2>
           <p class="lead">Fast deployment with premium QA. We build like a product team — not freelancers.</p>
         </div>
-
         <div class="steps">
           <div class="step reveal">
             <div><b>1</b><span style="color:var(--muted)">Strategy Call</span></div>
@@ -577,11 +554,8 @@
       <section id="team" class="block">
         <div class="reveal">
           <h2>About the team</h2>
-          <p class="lead">
-            FESCO.AI is a small, fast and elite team of AI engineers and growth operators. We don’t sell software — we build revenue systems.
-          </p>
+          <p class="lead">FESCO.AI is a small, fast and elite team of AI engineers and growth operators. We don’t sell software — we build revenue systems.</p>
         </div>
-
         <div class="cards">
           <div class="card reveal">
             <h3>AI Engineering</h3>
@@ -602,10 +576,7 @@
       <section id="meeting" class="block">
         <div class="reveal">
           <h2>Request a Quote / Book Online Meeting</h2>
-          <p class="lead">
-            Pricing is discussed on the strategy call because every system is custom: channels, integrations and complexity.
-            Fill the form and we’ll contact you with the best setup + an exact quote.
-          </p>
+          <p class="lead">Pricing is discussed on the strategy call because every system is custom. Fill the form and we’ll contact you with the best setup + an exact quote.</p>
         </div>
 
         <div class="form reveal">
@@ -662,9 +633,7 @@
               <button class="btn" type="button" id="copyEmail">Copy our email</button>
             </div>
 
-            <div class="hint">
-              This form opens an email draft (no backend). Want it реально отправлялось? I’ll switch to Netlify Forms / Formspree.
-            </div>
+            <div class="hint">This form opens an email draft (no backend). Want real submission? Switch to Netlify Forms / Formspree.</div>
           </form>
 
           <aside class="aside">
@@ -677,8 +646,8 @@
             </ul>
             <div style="height:1px;background:rgba(255,255,255,.06);margin:22px 0"></div>
             <div style="color:var(--muted2);font-size:13px;line-height:1.7">
-              Contact: <span class="kbd" id="contactEmail">hello@fesco.ai</span><br/>
-              (change this to your real email)
+              Contact: <span class="kbd">hello@fesco.ai</span><br/>
+              (change this to your real email in the script)
             </div>
           </aside>
         </div>
@@ -760,19 +729,19 @@ ${fd.get('meeting') || ''}
       window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     });
 
-    // Reveal on scroll
+    // reveal on scroll
     const els = Array.from(document.querySelectorAll('.reveal'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
     }, { threshold: 0.12 });
     els.forEach(el => io.observe(el));
 
-    // === LUXURY COLOR SHIFT ON SCROLL (THIS IS THE KEY) ===
+    // LUXURY COLOR SHIFT ON SCROLL (key)
     const root = document.documentElement;
     function setProgress(){
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const docH = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-      const p = Math.min(1, Math.max(0, scrollTop / docH));
+      const st = window.scrollY || document.documentElement.scrollTop;
+      const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      const p = Math.min(1, Math.max(0, st / max));
       root.style.setProperty('--p', p.toFixed(4));
     }
     setProgress();
@@ -780,3 +749,4 @@ ${fd.get('meeting') || ''}
   </script>
 </body>
 </html>
+
